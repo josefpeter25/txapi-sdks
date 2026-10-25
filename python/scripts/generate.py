@@ -985,13 +985,19 @@ def render_generated(spec: dict) -> str:
 
 
 def ruff_format(source: str, filename: Path) -> str:
-    candidates = [Path(sys.executable).parent / "ruff", ROOT / ".venv" / "bin" / "ruff"]
+    # Windows venvs keep it as Scripts\ruff.exe.
+    candidates = [Path(sys.executable).parent / name for name in ("ruff", "ruff.exe")] + [
+        ROOT / ".venv" / "bin" / "ruff",
+        ROOT / ".venv" / "Scripts" / "ruff.exe",
+    ]
     exe = next((str(c) for c in candidates if c.exists()), "ruff")
     result = subprocess.run(
         [exe, "format", "--stdin-filename", str(filename), "-"],
         input=source,
         capture_output=True,
         text=True,
+        # ruff reads and writes UTF-8; the locale default is cp1252 on Windows.
+        encoding="utf-8",
         cwd=ROOT,
         check=False,
     )

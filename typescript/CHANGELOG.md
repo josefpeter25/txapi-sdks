@@ -3,7 +3,12 @@
 All notable changes to `@txapi/sdk` are documented here. This project follows
 [Semantic Versioning](https://semver.org/).
 
-## 1.0.0 — 2026-10-14
+## [1.0.1] — 2026-10-25
+
+No code changes. First release published from GitHub Actions through npm trusted publishing,
+with a provenance statement linking the package to its source commit.
+
+## [1.0.0] — 2026-10-14
 
 First release, targeting txApi **API version 1.8.0**.
 

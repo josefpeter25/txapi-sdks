@@ -6,7 +6,7 @@ lua54 'yes'
 name 'txapi'
 author 'Josef Peter'
 description 'Official txApi SDK for FiveM/RedM — server-side Lua client for https://txapi.cloud'
-version '1.0.0'
+version '1.0.1'
 license 'MIT'
 repository 'https://github.com/josefpeter25/txapi-sdks'
 

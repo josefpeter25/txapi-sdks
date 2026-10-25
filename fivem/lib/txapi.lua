@@ -1,5 +1,5 @@
 --[[
-    txApi SDK for FiveM / RedM (server-side Lua 5.4)  —  version 1.0.0, MIT
+    txApi SDK for FiveM / RedM (server-side Lua 5.4)  —  version 1.0.1, MIT
     https://txapi.cloud/docs
 
     Load order in YOUR resource's fxmanifest.lua:
@@ -31,7 +31,7 @@ if type(TxApi._spec) ~= 'table' then
     error("txapi: load '@txapi/lib/endpoints.lua' BEFORE '@txapi/lib/txapi.lua' in your fxmanifest.lua", 0)
 end
 
-TxApi.VERSION = '1.0.0'
+TxApi.VERSION = '1.0.1'
 TxApi.API_VERSION = TxApi._spec.apiVersion
 TxApi.DEFAULT_BASE_URL = 'https://txapi.cloud'
 TxApi.WEBHOOK_EVENTS = TxApi._spec.webhookEvents
@@ -688,7 +688,7 @@ end
     config.maxRetries  default 2 (0 disables retries)
     config.rateLimitRetryDelay  seconds to wait before retrying a per-minute 429 when the
                        Retry-After header is not visible (FXServer hides it), default 15
-    config.userAgent   appended to "txapi-fivem/1.0.0"
+    config.userAgent   appended to "txapi-fivem/1.0.1"
     config.onRequest / config.onResponse  hooks for logging/metrics (errors in them are ignored;
                        the Authorization header is redacted)
     config.transport   replacement for PerformHttpRequest (same signature) — for tests/proxies

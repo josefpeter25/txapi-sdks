@@ -4,6 +4,10 @@ All notable changes to the txApi FiveM SDK are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-25
+
+No code changes; released together with the other SDKs (all four share one version).
+
 ## [1.0.0] - 2026-10-14
 
 First release, built against txApi **1.8.0** (`spec/endpoints.json`).

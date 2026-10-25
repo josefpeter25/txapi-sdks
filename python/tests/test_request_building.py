@@ -81,8 +81,8 @@ def test_repr_never_contains_the_key(recorder: Recorder) -> None:
 
 
 def test_versions() -> None:
-    assert txapi.__version__ == "1.0.0"
-    assert txapi.VERSION == "1.0.0"
+    assert txapi.__version__ == "1.0.1"
+    assert txapi.VERSION == "1.0.1"
     assert txapi.API_VERSION == "1.8.0"
 
 

@@ -2,7 +2,11 @@
 
 All notable changes to the txApi Java SDK. The project follows [Semantic Versioning](https://semver.org).
 
-## 1.0.0 — 2026-10-14
+## [1.0.1] — 2026-10-25
+
+No code changes; released together with the other SDKs (all four share one version).
+
+## [1.0.0] — 2026-10-14
 
 First release, built against txApi API **1.8.0**.
 

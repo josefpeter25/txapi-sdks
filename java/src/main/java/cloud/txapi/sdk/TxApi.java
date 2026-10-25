@@ -52,7 +52,7 @@ import java.util.function.Function;
  */
 public final class TxApi implements AutoCloseable {
     /** Version of this SDK. */
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
     /** API version this SDK was built against ({@code spec/endpoints.json → apiVersion}). */
     public static final String API_VERSION = "1.8.0";
     /** Default base URL. */

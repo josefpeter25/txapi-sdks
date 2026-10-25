@@ -14,7 +14,7 @@ Sources of truth, in this order:
 3. `spec/webhook-vectors.json` — shared signature test vectors.
 4. The API's implementation when (1) leaves a detail open.
 
-API version targeted by SDK 1.0.0: **1.8.0** (`spec/endpoints.json → apiVersion`).
+API version targeted by SDK 1.0.1: **1.8.0** (`spec/endpoints.json → apiVersion`).
 Each SDK exposes it as a constant (`API_VERSION`) next to its own `VERSION`.
 
 ---

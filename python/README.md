@@ -22,7 +22,7 @@ the import stays `import txapi`. Every release is also attached to
 `https://txapi.cloud/sdks/` (checksums in `SHA256SUMS`), for setups without PyPI access:
 
 ```bash
-pip install "txapi-sdk[live] @ https://txapi.cloud/sdks/txapi_sdk-1.0.0-py3-none-any.whl"
+pip install "txapi-sdk[live] @ https://txapi.cloud/sdks/txapi_sdk-1.0.1-py3-none-any.whl"
 ```
 
 ## Contents
@@ -86,7 +86,7 @@ asyncio.run(main())
 | `server_id` | — | default server for every server-scoped call; each call can pass `server_id=` |
 | `timeout` | `30` | seconds per attempt; each call can pass `timeout=` |
 | `max_retries` | `2` | retries after the first attempt, `0` disables retries |
-| `user_agent` | — | appended to `txapi-python/1.0.0` |
+| `user_agent` | — | appended to `txapi-python/1.0.1` |
 | `http_client` | — | your own `httpx.Client` / `httpx.AsyncClient` (not closed by the SDK) |
 | `on_request` / `on_response` | — | hooks for logging/metrics |
 
@@ -96,7 +96,7 @@ print(client.account.servers())                # account-level: no serverId is s
 client.server.status(server_id=2)              # override the default server for one call
 ```
 
-`txapi.__version__` is the SDK version (`1.0.0`), `txapi.API_VERSION` the API version it was
+`txapi.__version__` is the SDK version (`1.0.1`), `txapi.API_VERSION` the API version it was
 built for (`1.8.0`).
 
 ## Calling endpoints

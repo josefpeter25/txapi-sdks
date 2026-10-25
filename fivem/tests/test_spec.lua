@@ -3,7 +3,7 @@ test('generated endpoint table matches spec/endpoints.json', function()
     local spec = readSpec()
     eq(TxApi.API_VERSION, spec.apiVersion, 'API_VERSION')
     eq(TxApi.API_VERSION, '1.8.0')
-    eq(TxApi.VERSION, '1.0.0')
+    eq(TxApi.VERSION, '1.0.1')
     eq(#TxApi._spec.endpoints, #spec.endpoints, 'endpoint count')
     eq(#spec.endpoints, 67)
     for i, e in ipairs(spec.endpoints) do

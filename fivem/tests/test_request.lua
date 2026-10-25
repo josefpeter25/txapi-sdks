@@ -101,7 +101,7 @@ test('headers: Bearer key, Accept, User-Agent; redirects are not followed', func
     local r = one()
     eq(r.headers['Authorization'], 'Bearer ' .. KEY)
     eq(r.headers['Accept'], 'application/json')
-    eq(r.headers['User-Agent'], 'txapi-fivem/1.0.0 myres/2.1')
+    eq(r.headers['User-Agent'], 'txapi-fivem/1.0.1 myres/2.1')
     eq(r.options.followLocation, false)
     eq(r.url, 'https://api.test/api/v1/me')
 end)

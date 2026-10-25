@@ -49,7 +49,7 @@ test('exports.getRateLimit / version / methods; a callback is required', functio
     H.run()
     deq(H.exports.getRateLimit(), { limit = 60, remaining = 10, resetSeconds = 9 })
     local v, av = H.exports.version()
-    eq(v, '1.0.0'); eq(av, '1.8.0')
+    eq(v, '1.0.1'); eq(av, '1.8.0')
     eq(#H.exports.methods(), 67)
     raises(function() H.exports.call('players.stats', {}) end, 'callback')
 end)

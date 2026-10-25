@@ -10,7 +10,7 @@ stream the live console, read the event log, and verify webhooks.
 - ESM **and** CommonJS, with `.d.ts` for both.
 - Retries, rate-limit headers, auto-pagination, typed errors, live streams with reconnect.
 
-API version: **1.8.0** (`API_VERSION`). SDK version: **1.0.0** (`VERSION`).
+API version: **1.8.0** (`API_VERSION`). SDK version: **1.0.1** (`VERSION`).
 
 > **Never put your API key in a browser.** A key in client-side JavaScript is readable by
 > everyone who opens the page and grants full access to your servers within its scopes.
@@ -46,7 +46,7 @@ Every release is also attached to
 tarball URL directly, and the package name stays `@txapi/sdk`:
 
 ```bash
-npm install https://txapi.cloud/sdks/txapi-sdk-1.0.0.tgz
+npm install https://txapi.cloud/sdks/txapi-sdk-1.0.1.tgz
 ```
 
 ## Quickstart
@@ -89,7 +89,7 @@ const txapi = new TxApi({
   serverId: 1,                     // default ?serverId= for server-scoped calls
   timeout: 30_000,                 // per attempt, milliseconds
   maxRetries: 2,                   // 0 disables automatic retries
-  userAgent: "my-bot/2.1",         // appended: "txapi-typescript/1.0.0 my-bot/2.1"
+  userAgent: "my-bot/2.1",         // appended: "txapi-typescript/1.0.1 my-bot/2.1"
   fetch: customFetch,              // e.g. a proxy-aware fetch or a test double
   WebSocket: WebSocketImpl,        // for live streams on Node 18/20 (see below)
   onRequest: (info) => {},         // before every attempt

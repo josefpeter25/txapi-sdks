@@ -4,16 +4,13 @@ All notable changes to the txApi Python SDK (distribution `txapi-sdk`, import `t
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow
 [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.0.1] — 2026-10-25
 
 ### Fixed
 
-- `ConsoleStream.send_command()` right after `async with client.console.connect()` raised
-  `APIConnectionError("live console is not connected")` against the real API — `async with`
-  only starts connecting in the background. It now waits for the (re)connect within
-  `timeout`, raises `APITimeoutError` if none comes, and `APIConnectionError` with the close
-  code and reason if the stream was refused (1008) or has ended. The README example works as
-  written.
+- `scripts/generate.py` and its freshness test work in a Windows virtualenv: they find
+  `Scripts\ruff.exe` and pass the source to ruff as UTF-8 (the locale default there is
+  cp1252). Only affects development of the SDK; the package itself is unchanged.
 
 ## [1.0.0] — 2026-10-14
 
@@ -45,3 +42,12 @@ First release, targeting txApi **1.8.0**. Published on PyPI as **`txapi-sdk`** (
 - Live console and server-log streams (`txapi[live]`, `websockets`): async iteration or
   callbacks, `send_command` with FIFO ack correlation and timeout, automatic reconnect on
   1001/1006/1011/1012 and network loss, no reconnect on 1008/1009 with the close reason surfaced.
+
+### Fixed
+
+- `ConsoleStream.send_command()` right after `async with client.console.connect()` raised
+  `APIConnectionError("live console is not connected")` against the real API — `async with`
+  only starts connecting in the background. It now waits for the (re)connect within
+  `timeout`, raises `APITimeoutError` if none comes, and `APIConnectionError` with the close
+  code and reason if the stream was refused (1008) or has ended. The README example works as
+  written. (Fixed before the first public release; part of every published 1.0.0 file.)

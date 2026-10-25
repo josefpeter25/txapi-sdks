@@ -54,7 +54,7 @@ From Maven Central (JDK 17+):
 <dependency>
   <groupId>cloud.txapi</groupId>
   <artifactId>txapi-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
@@ -62,14 +62,14 @@ From Maven Central (JDK 17+):
 
 ```kotlin
 dependencies {
-    implementation("cloud.txapi:txapi-sdk:1.0.0")
+    implementation("cloud.txapi:txapi-sdk:1.0.1")
 }
 ```
 
 **Gradle (Groovy DSL)**
 
 ```groovy
-dependencies { implementation 'cloud.txapi:txapi-sdk:1.0.0' }
+dependencies { implementation 'cloud.txapi:txapi-sdk:1.0.1' }
 ```
 
 The one runtime dependency (`jackson-databind`) comes along transitively.
@@ -80,9 +80,9 @@ Without access to Maven Central: every release is also attached to
 local repository once, then add `mavenLocal()` to your Gradle repositories:
 
 ```bash
-curl -fLO https://txapi.cloud/sdks/txapi-sdk-1.0.0.jar
-curl -fLO https://txapi.cloud/sdks/txapi-sdk-1.0.0.pom
-mvn install:install-file -Dfile=txapi-sdk-1.0.0.jar -DpomFile=txapi-sdk-1.0.0.pom
+curl -fLO https://txapi.cloud/sdks/txapi-sdk-1.0.1.jar
+curl -fLO https://txapi.cloud/sdks/txapi-sdk-1.0.1.pom
+mvn install:install-file -Dfile=txapi-sdk-1.0.1.jar -DpomFile=txapi-sdk-1.0.1.pom
 ```
 
 If your application is modular, add `requires cloud.txapi.sdk;` to your `module-info.java`
@@ -136,7 +136,7 @@ TxApi client = TxApi.builder()
         .serverId(12)                         // default server for every call
         .timeout(Duration.ofSeconds(30))      // per attempt (default 30 s)
         .maxRetries(2)                        // default 2, 0 disables retries
-        .userAgent("my-bot/1.4")              // appended to "txapi-java/1.0.0"
+        .userAgent("my-bot/1.4")              // appended to "txapi-java/1.0.1"
         .httpClient(myHttpClient)             // bring your own java.net.http.HttpClient
         .onRequest(e -> log.debug("→ {} {}", e.method(), e.uri()))
         .onResponse(e -> log.debug("← {} in {}", e.status(), e.elapsed()))
@@ -575,7 +575,7 @@ TXAPI_WEBHOOK_SECRET=whsec_…              java -cp "$CP" examples.WebhookServe
 
 ```bash
 mvn test        # unit tests against a local mock server — no network, no API key
-mvn install     # build target/txapi-sdk-1.0.0.jar and install it locally
+mvn install     # build target/txapi-sdk-1.0.1.jar and install it locally
 ```
 
 The tests cover all 67 endpoints, request building, error mapping, retries, rate limits,
@@ -584,7 +584,7 @@ WebSocket client. Requires JDK 17+.
 
 ## Versioning
 
-`TxApi.VERSION` is the SDK version (`1.0.0`), `TxApi.API_VERSION` the txApi API version it was
+`TxApi.VERSION` is the SDK version (`1.0.1`), `TxApi.API_VERSION` the txApi API version it was
 generated against (`1.8.0`). See [CHANGELOG.md](CHANGELOG.md).
 
 ## License

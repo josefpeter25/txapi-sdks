@@ -1,6 +1,6 @@
 """Version constants of the txApi Python SDK."""
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 """Version of this SDK."""
 
 API_VERSION = "1.8.0"

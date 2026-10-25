@@ -1,6 +1,6 @@
 {
   "name": "@txapi/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official TypeScript/JavaScript SDK for the txApi REST and WebSocket API (txAdmin / FiveM server management).",
   "license": "MIT",
   "author": "Josef Peter",

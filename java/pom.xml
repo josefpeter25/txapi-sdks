@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cloud.txapi</groupId>
   <artifactId>txapi-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>txApi Java SDK</name>
   <description>Official Java client for the txApi REST and WebSocket API (FiveM / txAdmin).</description>

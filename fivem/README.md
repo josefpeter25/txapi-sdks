@@ -4,7 +4,7 @@ Official server-side Lua client for the [txApi](https://txapi.cloud) REST API �
 whitelist, run console commands, read the event log and manage txAdmin admins from your own
 FiveM or RedM resources.
 
-- SDK version **1.0.0**, targets API version **1.8.0** (`TxApi.VERSION`, `TxApi.API_VERSION`)
+- SDK version **1.0.1**, targets API version **1.8.0** (`TxApi.VERSION`, `TxApi.API_VERSION`)
 - All **67** endpoints, grouped like the other official SDKs (`api.players.ban`, `api.history.revoke`, …)
 - Blocking style inside threads **or** callbacks, from anywhere
 - Automatic retries, rate-limit information, auto-paging iterators
@@ -41,9 +41,9 @@ FiveM or RedM resources.
 
 ## Installation
 
-1. Download `txapi-fivem-1.0.0.zip` from
+1. Download `txapi-fivem-1.0.1.zip` from
    [GitHub Releases](https://github.com/josefpeter25/txapi-sdks/releases) (or
-   <https://txapi.cloud/sdks/txapi-fivem-1.0.0.zip>) and extract it into your server's
+   <https://txapi.cloud/sdks/txapi-fivem-1.0.1.zip>) and extract it into your server's
    `resources/` directory. The zip contains a folder **`txapi`** — keep that name (the library
    paths below are `@txapi/...`). Checksums are in `SHA256SUMS` next to the zip.
 2. Create an API key in the txApi dashboard (**API Keys**). Give it only the scopes you need.
@@ -54,7 +54,7 @@ set txapi_key "txp_xxxxxxxxxxxxxxxx"
 ensure txapi
 ```
 
-On start the resource prints `[txapi] ready — SDK 1.0.0, API 1.8.0, TxApi(baseUrl=…)` or the
+On start the resource prints `[txapi] ready — SDK 1.0.1, API 1.8.0, TxApi(baseUrl=…)` or the
 reason it is not configured. It never prints the key.
 
 ## Configuration (server.cfg)
@@ -121,7 +121,7 @@ option **raises** (the only place the SDK throws).
 | `timeout` | `30` | seconds per attempt (see [timeouts](#retries-and-timeouts)) |
 | `maxRetries` | `2` | `0` disables retries |
 | `rateLimitRetryDelay` | `15` | seconds to wait before retrying a per-minute `429` when FXServer hides `Retry-After` |
-| `userAgent` | — | appended to `txapi-fivem/1.0.0` |
+| `userAgent` | — | appended to `txapi-fivem/1.0.1` |
 | `onRequest(info)` / `onResponse(info)` | — | logging/metrics hooks; run in `pcall`, cannot break a request; the `Authorization` header they see is `Bearer ***` |
 | `transport` | `PerformHttpRequest` | same signature; for tests or a proxy wrapper |
 
@@ -134,7 +134,7 @@ local api = TxApi.new({
         if info.error then print(('[txapi] %s %s → %s'):format(info.method, info.url, tostring(info.error))) end
     end,
 })
-print(api)                 --> TxApi(baseUrl=https://txapi.cloud, serverId=3, sdk=1.0.0)
+print(api)                 --> TxApi(baseUrl=https://txapi.cloud, serverId=3, sdk=1.0.1)
 ```
 
 ### Blocking vs. callback
@@ -204,7 +204,7 @@ exports.txapi:call('server.resources.restart', { name = 'chat', serverId = 3 }, 
 | `getRateLimit()` | `{ limit, remaining, resetSeconds }` of the last response, or `nil` |
 | `isConfigured()` | `false` while `txapi_key` is missing |
 | `methods()` | list of all method names |
-| `version()` | `'1.0.0', '1.8.0'` (SDK, API) |
+| `version()` | `'1.0.1', '1.8.0'` (SDK, API) |
 
 ## Methods
 
