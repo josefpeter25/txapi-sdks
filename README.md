@@ -1,5 +1,11 @@
 # txApi SDKs
 
+[![npm](https://img.shields.io/npm/v/@txapi/sdk?label=npm%20%40txapi%2Fsdk)](https://www.npmjs.com/package/@txapi/sdk)
+[![PyPI](https://img.shields.io/pypi/v/txapi-sdk?label=PyPI%20txapi-sdk)](https://pypi.org/project/txapi-sdk/)
+[![Maven Central](https://img.shields.io/maven-central/v/cloud.txapi/txapi-sdk?label=Maven%20Central)](https://central.sonatype.com/artifact/cloud.txapi/txapi-sdk)
+[![Release](https://img.shields.io/github/v/release/josefpeter25/txapi-sdks?label=FiveM%20zip)](https://github.com/josefpeter25/txapi-sdks/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 Official client libraries for the [txApi](https://txapi.cloud) REST and WebSocket API — manage
 your FiveM / RedM servers' txAdmin from your own code: search, ban and warn players, run console
 commands, stream the live console, read the event log, manage the whitelist and txAdmin admins,
